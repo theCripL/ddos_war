@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDos_war Overlay — Cyber HUD Тестовый Стенд v1.4</title>
+    <link rel="stylesheet" href="media/style.css">
+</head>
+<body>
+    <canvas id="overlayCanvas"></canvas>
+
+    <div id="testPanel" class="test-panel">
+        <div class="panel-row">
+            <span class="panel-title">БАЗОВЫЕ:</span>
+            <button onclick="window.spawnOne('УЗЕЛ_01', 'СИГНАЛ_В_НОРМЕ')">ТЕСТ (1)</button>
+            <button onclick="window.spawnLongMsg()">БЕГУЩАЯ СТРОКА</button>
+            <button onclick="window.startSpamTest(50)">СПАМ (0.5-5с)</button>
+            <button onclick="window.spawnStress(50)">СТРЕСС (50)</button>
+        </div>
+
+        <div class="panel-row">
+            <span class="panel-title">МИТИНГИ:</span>
+            <button onclick="window.testRallySynergy()">МИТИНГ (2: БУНТ)</button>
+            <button onclick="window.testRallyCrowd()">+ТОЛПА (+6)</button>
+            <button onclick="window.testDisperse()">РАСХОДИМСЯ ВСЕ</button>
+            <button class="btn-danger" onclick="window.clearAll()">ОЧИСТИТЬ ВСЁ</button>
+        </div>
+
+        <div class="panel-row">
+            <span class="panel-title">ДОНАТЫ:</span>
+            <button onclick="window.testDonationArrows(70)">СТРЕЛА (70Р = 7 ШТ)</button>
+            <button onclick="window.testDonationMeteor()">МЕТЕОРИТ (500Р)</button>
+            <button onclick="window.testDonationTrojan()" style="border-color: #FF2A55; color: #FF2A55;">ТРОЯН (5000Р)</button>
+        </div>
+    </div>
+
+    <!-- Скрипты и данные -->
+    <script src="config.js"></script>
+    <script src="media/blacklist.js"></script>
+    <script src="logic/sound-manager.js"></script>
+    <script src="logic/text-renderer.js"></script>
+    <script src="logic/rally-renderer.js"></script>
+    <script src="logic/rally-manager.js"></script>
+    <script src="logic/event-manager.js"></script>
+    <script src="logic/walker.js"></script>
+    <script src="logic/crowd-manager.js"></script>
+    <script src="logic/twitch-service.js"></script>
+    <script src="logic/donation-service.js"></script>
+    <script src="logic/main.js"></script>
+</body>
+</html>
